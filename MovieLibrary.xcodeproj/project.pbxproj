@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F035DFB299546960004CC14 /* ListPopularFilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F035DF9299546960004CC14 /* ListPopularFilmsViewController.swift */; };
+		9F035DFC299546960004CC14 /* ListPopularFilmsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F035DFA299546960004CC14 /* ListPopularFilmsViewController.xib */; };
 		9FA8FE532992BD3B00D9017A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8FE522992BD3B00D9017A /* AppDelegate.swift */; };
 		9FA8FE552992BD3B00D9017A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8FE542992BD3B00D9017A /* SceneDelegate.swift */; };
 		9FA8FE5C2992BD3B00D9017A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA8FE5B2992BD3B00D9017A /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F035DF9299546960004CC14 /* ListPopularFilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPopularFilmsViewController.swift; sourceTree = "<group>"; };
+		9F035DFA299546960004CC14 /* ListPopularFilmsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPopularFilmsViewController.xib; sourceTree = "<group>"; };
 		9FA8FE4F2992BD3B00D9017A /* MovieLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA8FE522992BD3B00D9017A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FA8FE542992BD3B00D9017A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F035DFD299547050004CC14 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9F035DFE2995470F0004CC14 /* PopularFilms */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9F035DFE2995470F0004CC14 /* PopularFilms */ = {
+			isa = PBXGroup;
+			children = (
+				9F035DFA299546960004CC14 /* ListPopularFilmsViewController.xib */,
+			);
+			path = PopularFilms;
+			sourceTree = "<group>";
+		};
 		9FA8FE462992BD3A00D9017A = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +113,9 @@
 		9FA8FE512992BD3B00D9017A /* MovieLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				9FA8FE89299545C300D9017A /* Model */,
+				9FA8FE8A299545D000D9017A /* View */,
+				9FA8FE8B299545D700D9017A /* Controller */,
 				9FA8FE882995163000D9017A /* SupportingFiles */,
 				9FA8FE5B2992BD3B00D9017A /* Assets.xcassets */,
 				9FA8FE542992BD3B00D9017A /* SceneDelegate.swift */,
@@ -124,6 +147,29 @@
 				9FA8FE602992BD3B00D9017A /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		9FA8FE89299545C300D9017A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FA8FE8A299545D000D9017A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F035DFD299547050004CC14 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FA8FE8B299545D700D9017A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F035DF9299546960004CC14 /* ListPopularFilmsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F035DFC299546960004CC14 /* ListPopularFilmsViewController.xib in Resources */,
 				9FA8FE5C2992BD3B00D9017A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FA8FE532992BD3B00D9017A /* AppDelegate.swift in Sources */,
+				9F035DFB299546960004CC14 /* ListPopularFilmsViewController.swift in Sources */,
 				9FA8FE552992BD3B00D9017A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
