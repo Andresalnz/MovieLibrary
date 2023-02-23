@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Popular: Codable {
+struct PopularFilms: Codable {
     let page: Int?
-    let results: [Result]?
+    let results: [Outcome]?
     let totalPages: Int?
     let totalResults: Int?
     
@@ -21,7 +21,7 @@ struct Popular: Codable {
 }
 
 
-struct Result: Codable {
+struct Outcome: Codable {
     let adult: Bool?
     let backdropPath: String?
     let genreId: Genre?
