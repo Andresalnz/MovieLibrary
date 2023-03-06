@@ -24,7 +24,7 @@ struct PopularFilms: Codable {
 struct Outcome: Codable {
     let adult: Bool?
     let backdropPath: String?
-    let genreId: Genre?
+    let genreId: [Int]?
     let id: Int?
     let originalLanguage: String?
     let originalTitle: String?
@@ -56,17 +56,6 @@ struct Outcome: Codable {
     }
 }
 
-enum Genre : Int, Codable {
-    case action = 28
-    case adventure = 12
-    case animation = 16
-    case comedy = 35
-    case crime = 80
-    case documentary = 99
-    case drama = 18
-    case family = 10751
-    //...
-   
 
-}
+
 
