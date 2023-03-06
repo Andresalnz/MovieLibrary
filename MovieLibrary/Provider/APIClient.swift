@@ -12,8 +12,8 @@ class APIClient {
     let urlSession = URLSession.shared
     
     //Petición que devuelve un listad de peliculas populares
-    func getPopularFilms(url: String, completion: @escaping (Result<[Outcome], Error>) -> Void) {
-        guard let url = URL(string: url) else {
+    func getPopularFilms(url: String, number: Int, completion: @escaping (Result<[Outcome], Error>) -> Void) {
+        guard let url = URL(string: "\(url)&page=\(number)") else {
             completion(.failure(NSError(domain: "Invalid URL", code: -1)))
             return
         }
