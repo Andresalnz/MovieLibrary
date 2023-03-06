@@ -16,6 +16,7 @@ class ListPopularFilmsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpCollection()
         requestGetPopularFilm()
     }
     
@@ -29,12 +30,20 @@ class ListPopularFilmsViewController: UIViewController {
                 print(error)
             case .success(let response):
                 wSelf.popularFilms = response
+                DispatchQueue.main.async {
+                    wSelf.collectionPopularFilms.reloadData()
+                }
             }
         }
     }
     
-    
-    
-    
+    //MARK: - Prepare Collection
+    func setUpCollection() {
+        self.collectionPopularFilms.backgroundColor = .black
+        self.view.backgroundColor = .black
+        collectionPopularFilms.delegate = self
+        collectionPopularFilms.dataSource = self
+        collectionPopularFilms.register(UINib(nibName:"PopularFilmCollectionViewCell", bundle: nil), forCellWithReuseIdentifier:PopularFilmCollectionViewCell.identifier)
+    }
 
 }
