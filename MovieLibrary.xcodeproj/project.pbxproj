@@ -10,6 +10,10 @@
 		9F02B5B0299E4F2300D696D3 /* ListPopularFilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F035DF9299546960004CC14 /* ListPopularFilmsViewController.swift */; };
 		9F02B5B2299E520500D696D3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F02B5B1299E520500D696D3 /* APIClient.swift */; };
 		9F02B5B6299E540200D696D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F02B5B5299E540200D696D3 /* Constants.swift */; };
+		9F02B5B929A77FBF00D696D3 /* ListPopularFilmsViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F02B5B829A77FBF00D696D3 /* ListPopularFilmsViewController+Extension.swift */; };
+		9F02B5BD29A7814A00D696D3 /* PopularFilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F02B5BB29A7814A00D696D3 /* PopularFilmCollectionViewCell.swift */; };
+		9F02B5BE29A7814A00D696D3 /* PopularFilmCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F02B5BC29A7814A00D696D3 /* PopularFilmCollectionViewCell.xib */; };
+		9F02B5C029A79F7300D696D3 /* UIimageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F02B5BF29A79F7300D696D3 /* UIimageView+Extension.swift */; };
 		9F035DFC299546960004CC14 /* ListPopularFilmsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F035DFA299546960004CC14 /* ListPopularFilmsViewController.xib */; };
 		9FA8FE532992BD3B00D9017A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8FE522992BD3B00D9017A /* AppDelegate.swift */; };
 		9FA8FE552992BD3B00D9017A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8FE542992BD3B00D9017A /* SceneDelegate.swift */; };
@@ -40,6 +44,10 @@
 /* Begin PBXFileReference section */
 		9F02B5B1299E520500D696D3 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9F02B5B5299E540200D696D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9F02B5B829A77FBF00D696D3 /* ListPopularFilmsViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListPopularFilmsViewController+Extension.swift"; sourceTree = "<group>"; };
+		9F02B5BB29A7814A00D696D3 /* PopularFilmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularFilmCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F02B5BC29A7814A00D696D3 /* PopularFilmCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularFilmCollectionViewCell.xib; sourceTree = "<group>"; };
+		9F02B5BF29A79F7300D696D3 /* UIimageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimageView+Extension.swift"; sourceTree = "<group>"; };
 		9F035DF9299546960004CC14 /* ListPopularFilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPopularFilmsViewController.swift; sourceTree = "<group>"; };
 		9F035DFA299546960004CC14 /* ListPopularFilmsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPopularFilmsViewController.xib; sourceTree = "<group>"; };
 		9FA8FE4F2992BD3B00D9017A /* MovieLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,9 +104,28 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		9F02B5B729A77F7D00D696D3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F02B5B829A77FBF00D696D3 /* ListPopularFilmsViewController+Extension.swift */,
+				9F02B5BF29A79F7300D696D3 /* UIimageView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9F02B5BA29A780FD00D696D3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9F02B5BB29A7814A00D696D3 /* PopularFilmCollectionViewCell.swift */,
+				9F02B5BC29A7814A00D696D3 /* PopularFilmCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9F035DFE2995470F0004CC14 /* PopularFilms */ = {
 			isa = PBXGroup;
 			children = (
+				9F02B5BA29A780FD00D696D3 /* Cell */,
 				9F035DFA299546960004CC14 /* ListPopularFilmsViewController.xib */,
 			);
 			path = PopularFilms;
@@ -208,6 +235,7 @@
 		9FE0687D299E48E7007A34A6 /* PopularFilm */ = {
 			isa = PBXGroup;
 			children = (
+				9F02B5B729A77F7D00D696D3 /* Extensions */,
 				9F035DF9299546960004CC14 /* ListPopularFilmsViewController.swift */,
 			);
 			path = PopularFilm;
@@ -319,6 +347,7 @@
 			files = (
 				9F035DFC299546960004CC14 /* ListPopularFilmsViewController.xib in Resources */,
 				9FA8FE5C2992BD3B00D9017A /* Assets.xcassets in Resources */,
+				9F02B5BE29A7814A00D696D3 /* PopularFilmCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,12 +372,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F02B5BD29A7814A00D696D3 /* PopularFilmCollectionViewCell.swift in Sources */,
 				9F02B5B0299E4F2300D696D3 /* ListPopularFilmsViewController.swift in Sources */,
 				9FA8FE532992BD3B00D9017A /* AppDelegate.swift in Sources */,
 				9FE0687B299E3ABD007A34A6 /* ModelPopularFilms.swift in Sources */,
 				9F02B5B2299E520500D696D3 /* APIClient.swift in Sources */,
 				9FA8FE552992BD3B00D9017A /* SceneDelegate.swift in Sources */,
 				9F02B5B6299E540200D696D3 /* Constants.swift in Sources */,
+				9F02B5B929A77FBF00D696D3 /* ListPopularFilmsViewController+Extension.swift in Sources */,
+				9F02B5C029A79F7300D696D3 /* UIimageView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +543,7 @@
 				INFOPLIST_FILE = MovieLibrary/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -539,7 +571,6 @@
 				INFOPLIST_FILE = MovieLibrary/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
