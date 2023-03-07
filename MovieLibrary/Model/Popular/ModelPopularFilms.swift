@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PopularFilms: Codable {
+struct MediaData: Codable {
     let page: Int?
     let results: [Outcome]?
     let totalPages: Int?
