@@ -36,6 +36,10 @@ class PopularFilmCollectionViewCell: UICollectionViewCell {
     }
     
    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.imageFilm.image = nil
+    }
     
     //MARK: - Draw information
     func dataCell(data: Outcome) {
