@@ -14,6 +14,7 @@ class ListPopularFilmsViewController: UIViewController {
 //MARK: - Variables
     var popularFilms: [Outcome] = []
     var page: Int = 1
+    var fetchingBool: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +59,20 @@ class ListPopularFilmsViewController: UIViewController {
         let offsetY = scrollView.contentOffset.y
         let height = scrollView.contentSize.height
         
-        if offsetY > height - scrollView.frame.size.height && popularFilms.count > 0 {
-            page += 1
-            requestGetPopularFilm(number: page)
+        if offsetY > height - scrollView.frame.size.height {
+            if !fetchingBool {
+                beginBatchFetch()
+            }
+        }
+    }
+    
+    func beginBatchFetch() {
+        fetchingBool = true
+        page += 1
+        DispatchQueue.main.async {
+            self.requestGetPopularFilm(number: self.page)
+            self.fetchingBool = false
+            self.collectionPopularFilms.reloadData()
         }
     }
 }
